@@ -13,7 +13,13 @@
             "ip_name": "b4",
             "zone_name": "asia-east1-a",
             "port": 59571
+        },
+        {
+            "project_name": "tikka01",
+            "instance_name": "tw2",
+            "ip_name": "tw6",
+            "zone_name": "asia-east1-c",
+            "port": 7557
         }
-        // 您可以在这里添加更多服务器配置
     ]
 }
