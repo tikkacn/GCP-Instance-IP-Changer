@@ -20,6 +20,7 @@ logger = logging.getLogger(__name__)
 
 # 创建默认配置
 def create_default_config():
+    config_file = "config-multi.json"
     default_config = {
         "global": {
             "round_time": 600,
@@ -38,21 +39,22 @@ def create_default_config():
             }
         ]
     }
-    with open("config.json", "w") as f:
+    with open(config_file, "w") as f:
         json.dump(default_config, f, indent=4)
     return default_config
 
 
 # 读取配置文件
 def load_config():
+    config_file = "config-multi.json"
     try:
-        if not os.path.exists("config.json"):
-            logger.error("Config file not found, creating default config")
+        if not os.path.exists(config_file):
+            logger.error(f"Config file {config_file} not found, creating default config")
             config = create_default_config()
-            logger.error("Please update the config.json file and restart the program")
+            logger.error(f"Please update the {config_file} file and restart the program")
             sys.exit(1)
         else:
-            with open("config.json", "r") as f:
+            with open(config_file, "r") as f:
                 config = json.load(f)
                 
             # 检查是否为新格式配置，如果是旧格式则转换
