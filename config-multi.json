@@ -1,0 +1,19 @@
+{
+    "global": {
+        "round_time": 600,
+        "key_path": "/root/key.json",
+        "tcping_server": "http://8.130.42.117:5000/check",
+        "proxy": "",
+        "ignore_location": true
+    },
+    "servers": [
+        {
+            "project_name": "tikka01",
+            "instance_name": "tw-884499",
+            "ip_name": "b4",
+            "zone_name": "asia-east1-a",
+            "port": 59571
+        }
+        // 您可以在这里添加更多服务器配置
+    ]
+}
